@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Official</title>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        .hero{
+            width: 100%;
+            height: 100vh;
+            background: #d1d1d1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            width: 400px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            color: #333;
+        }
+        .card h1{
+            font-weight: 500;
+            color: black;
+        }
+        .card ion-icon{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        label{
+            display: block;
+            width: 200px;
+            background: #e3362c;
+            color: white;
+            padding: 12px;
+            margin: 10px auto;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input{
+            display: none;
+        }
+
+    </style>
+
+    <body>
+        <div class="hero">
+            <div class="card">
+                <h1>Ritesh</h1>
+                <p>@riteshhhh_09_</p>
+                <ion-icon name="person-outline" id="profile-pic"></ion-icon>
+                <label for="input-file">upadate ..</label>
+                <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+            </div>
+        </div>
+        <script>
+
+            let profilePic = document.getElementById("profile-pic");
+            let inputFile = document.getElementById("input-file");
+
+            inputFile.onchange = function(){
+
+                profilePic.src = URL.createObjectURL(inputFile.files[0]);
+            }
+
+        </script>
+    </body>
+</html>
